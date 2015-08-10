@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+#example http://localhost:9001/gethz?k=test
+GET        /gethz               controllers.System.gethz(k: String ?="k=test")
+
+# example http://localhost:9001/puthz?k=test&v=test%20val
+GET        /puthz               controllers.System.puthz(k: String ?="testK", v: String ?="test data")
+
+# Map static resources from the /public folder to the /assets URL path
+GET        /assets/*file        controllers.Assets.at(path="/public", file)
